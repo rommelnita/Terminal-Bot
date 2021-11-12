@@ -9,6 +9,9 @@ app_id = int(os.environ.get("APP_ID"))
 app_hash = os.environ.get("API_HASH")
 allowed = [int(user) if id_pattern.search(user) else user for user in os.environ.get('AUTH_USERS', '').split()]
 
+logger: bool = True  # set it True to get logs in some channel...
+log_channel = -100
+
 help_text = """
 Hello I'm Terminal Bot which will Execute your Commands.
 
